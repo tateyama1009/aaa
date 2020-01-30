@@ -1,0 +1,18 @@
+{
+  "extends": [
+    "plugin:prettier/recommended",
+    "plugin:vue/recommended",
+    "prettier"
+  ],
+  "plugins":[
+    "vue", "prettier"
+  ],
+  "rules":{
+    "vue/max-attributes-per-line": "off",
+    "prettier/prettier":[
+      "error"
+    ],
+    "no-var": "error",
+    "no-multi-spaces": 2
+  }
+}

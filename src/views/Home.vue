@@ -12,18 +12,15 @@
             single-line
             filled
             dense
-          >
-          </v-textarea>
+          />
         </v-bottom-navigation>
       </v-container>
     </v-app>
   </div>
-
 </template>
 
 <script>
-
 export default {
-  name: 'home'
+  name: 'Home'
 }
 </script>

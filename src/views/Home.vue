@@ -7,7 +7,7 @@
             clearable
             append-outer-icon="mdi-send"
             auto-grow
-            row-height
+            row-height="8"
             label="Your message"
             single-line
             filled

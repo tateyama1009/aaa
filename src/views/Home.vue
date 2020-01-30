@@ -1,9 +1,8 @@
 <template>
-  <div class="home">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
     <v-app>
       <v-container>
-        <v-bottom-navigation>
+        <v-bottom-navigation absolute>
           <v-textarea
             clearable
             append-outer-icon="mdi-send"
@@ -23,13 +22,8 @@
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
-  name: 'home',
-  components: {
-    HelloWorld
-  }
+  name: 'home'
 }
 </script>

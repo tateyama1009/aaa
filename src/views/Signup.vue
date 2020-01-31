@@ -3,7 +3,7 @@
     <v-content>
       <v-container>
         <v-layout wrap>
-          <v-flex xs12 sm6 md6>
+          <v-flex xs12 sm8 md6>
             <form>
               <v-text-field
                 v-model="name"
@@ -43,7 +43,7 @@
               </v-btn>
               <v-btn class="ma-4">
                 or, from Google account
-                <v-icon right>
+                <v-icon color="blue darken-2" right>
                   {{ icons.mdiGoogle }}
                 </v-icon>
               </v-btn>

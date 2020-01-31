@@ -8,11 +8,14 @@
       dark
     >
       <v-container>
-        <v-list-item-content>
-          <v-list-item-title class="title white--text">
-            Menu
+        <v-list-item v-model="user">
+          <v-list-item-icon>
+            <v-icon>{{ user.icon }}</v-icon>
+          </v-list-item-icon>
+          <v-list-item-title class="white--text">
+            {{ user.username }}
           </v-list-item-title>
-        </v-list-item-content>
+        </v-list-item>
         <v-divider />
         <v-list dense nav>
           <v-list-item v-for="nav_list in nav_lists" :key="nav_list.name">
@@ -43,18 +46,6 @@
         </v-btn>
       </v-toolbar-items>
     </v-app-bar>
-    <v-bottom-navigation app min-height>
-      <v-textarea
-        clearable
-        append-outer-icon="mdi-send"
-        auto-grow
-        row-height="8"
-        label="Your message"
-        single-line
-        filled
-        dense
-      />
-    </v-bottom-navigation>
 
     <v-content>
       <router-view />
@@ -63,15 +54,20 @@
 </template>
 
 <script>
+import { mdiSettingsTransfer } from '@mdi/js'
+import { mdiFreebsd } from '@mdi/js'
+import { mdiCheckboxMultipleBlank } from '@mdi/js'
+import { mdiAccountCircleOutline } from '@mdi/js'
 export default {
   data() {
     return {
       drawer: null,
       nav_lists: [
-        { name: 'Getting Started', icon: 'mdi-vuetify' },
-        { name: 'Customization', icon: 'mdi-cogs' },
-        { name: 'Styles & animations', icon: 'mdi-palette' }
-      ]
+        { name: 'Channels', icon: mdiCheckboxMultipleBlank },
+        { name: 'friends', icon: mdiFreebsd },
+        { name: 'Settings', icon: mdiSettingsTransfer }
+      ],
+      user: { username: 'username', icon: mdiAccountCircleOutline }
     }
   }
 }

@@ -22,7 +22,7 @@
                 :type="show1 ? 'text' : 'password'"
                 clearable
                 name="input-10-1"
-                label="Normal with hint text"
+                label="Password"
                 hint="At least 8 characters"
                 counter
                 @click:append="show1 = !show1"
@@ -31,12 +31,7 @@
               <v-btn class="mr-4" @click="submit">
                 sign up
               </v-btn>
-              <v-btn class="ma-4">
-                or, from Google account
-                <v-icon right color="blue darken-2">
-                  {{ icons.mdiGoogle }}
-                </v-icon>
-              </v-btn>
+              <Googleauth />
             </form>
           </v-flex>
         </v-layout>
@@ -48,19 +43,16 @@
 <script>
 import { validationMixin } from 'vuelidate'
 import { required, maxLength, email } from 'vuelidate/lib/validators'
-
-import { mdiGoogle } from '@mdi/js'
+import Googleauth from '../components/Googleauth'
 
 export default {
+  components: { Googleauth },
   mixins: [validationMixin],
   validations: {
     name: { required, maxLength: maxLength(10) },
     email: { required, email }
   },
   data: () => ({
-    icons: {
-      mdiGoogle
-    },
     name: '',
     email: '',
     show1: false,

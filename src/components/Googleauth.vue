@@ -10,6 +10,26 @@
 </template>
 
 <script>
+import { mdiGoogle } from '@mdi/js'
+let firebase = require('firebase/app')
+require('firebase/auth')
+require('firebase/firebase-analytics')
+
+// Your web app's Firebase configuration
+let firebaseConfig = {
+  apiKey: 'AIzaSyChjoNSAeSO1aB1x5BQeoLjmOMqCl02jWI',
+  authDomain: 'aaa1-ac18a.firebaseapp.com',
+  databaseURL: 'https://aaa1-ac18a.firebaseio.com',
+  projectId: 'aaa1-ac18a',
+  storageBucket: 'aaa1-ac18a.appspot.com',
+  messagingSenderId: '971130358916',
+  appId: '1:971130358916:web:ae7b3133cd30e87c4086d1',
+  measurementId: 'G-NNMJLFQQBG'
+}
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig)
+firebase.analytics()
+
 export default {
   name: 'App',
   data() {
@@ -18,7 +38,10 @@ export default {
       userPic: null,
       isSignedIn: null,
       authButtonText: null,
-      authFunction: function() {}
+      authFunction: function() {},
+      icons: {
+        mdiGoogle
+      }
     }
   },
   created() {

@@ -26,7 +26,7 @@
         </v-list>
       </v-container>
     </v-navigation-drawer>
-    <v-app-bar app color="orange derken-5" dark clipped-left>
+    <v-app-bar app dense color="orange derken-5" dark clipped-left>
       <v-app-bar-nav-icon @click="drawer = !drawer" />
       <v-toolbar-title>
         <router-link to="/" tag="v-toolbar-title">
@@ -43,6 +43,18 @@
         </v-btn>
       </v-toolbar-items>
     </v-app-bar>
+    <v-bottom-navigation app min-height>
+      <v-textarea
+        clearable
+        append-outer-icon="mdi-send"
+        auto-grow
+        row-height="8"
+        label="Your message"
+        single-line
+        filled
+        dense
+      />
+    </v-bottom-navigation>
 
     <v-content>
       <router-view />

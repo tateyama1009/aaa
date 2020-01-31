@@ -30,7 +30,14 @@
 
   <!-- TODO: Add SDKs for Firebase products that you want to use
        https://firebase.google.com/docs/web/setup#available-libraries -->
-  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-analytics.js">
+  // Firebase App (the core Firebase SDK) is always required and
+    // must be listed before other Firebase SDKs
+    var firebase = require("firebase/app");
+
+    // Add the Firebase products that you want to use
+    require("firebase/auth");
+  </script>
 
   <script>
     // Your web app's Firebase configuration
